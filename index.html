@@ -6,10 +6,12 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     	<meta name="description" content="Personal Site">
     	<meta name="author" content="Karthik">
+    	<link rel="shortcut icon" href="#" />
+    	<link rel="manifest" href="/manifest.json">
 
     	<!-- Bootstrap CSS -->
-    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" media="print">
+    	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" media="print">
 
     	<title>Welcome</title>
   	</head>
@@ -386,7 +388,7 @@
     			<ul class="list-group">
 					<li class="list-group-item"><i class="fas fa-award text-warning"></i> Placed second in CTF competition held at UT Dallas</li>
 				  	<li class="list-group-item"><i class="fas fa-award text-warning"></i> Placed fourth in Data science competition held DFW Hackathon</li>
-				  	<li class="list-group-item"><i class="fas fa-award text-warning"></i> Was vice president of computer security club at UT Arlington</li>
+				  	<li class="list-group-item"><i class="fas fa-award text-warning"></i> Vice president of computer security club at UT Arlington</li>
 				</ul>
     		</section>
     	</div>
@@ -399,14 +401,13 @@
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous" async></script>
     	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous" async></script>
     	<script type="text/javascript">
-    		$('.nav-link').click(function() {
-			    var sectionTo = $(this).attr('href');
-			    $('html, body').animate({
-			      scrollTop: $(sectionTo).offset().top
-			    }, 1000);
-			});
+    		//Service worker registration
+    		if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('service-worker.js');
+			}
 
 			$(document).ready(function(){
+				//scroll to top
 			    $(window).scroll(function () {
 			        if ($(this).scrollTop() > 50) {
 			            $('#back-to-top').fadeIn();
@@ -422,6 +423,14 @@
 			        }, 1000);
 			        return false;
 			    });
+
+			    //Smooth scroll to div
+	    		$('.nav-link').click(function() {
+				    var sectionTo = $(this).attr('href');
+				    $('html, body').animate({
+				      scrollTop: $(sectionTo).offset().top
+				    }, 1000);
+				});
 			});
     	</script>
   	</body>
