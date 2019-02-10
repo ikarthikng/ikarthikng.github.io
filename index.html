@@ -14,18 +14,18 @@
     	<link rel="preload" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" as="style" onload="this.rel='stylesheet'">
 
     	<title>Welcome</title>
+	    <style type="text/css">
+	    	.back-to-top {
+	  			cursor: pointer;
+	  		    position: fixed;
+	  		    bottom: 20px;
+	  		    right: 20px;
+	  		    display:none;
+	  		}
+	    </style>
   	</head>
-  	<style type="text/css">
-  		.back-to-top {
-		    cursor: pointer;
-		    position: fixed;
-		    bottom: 20px;
-		    right: 20px;
-		    display:none;
-		}
-  	</style>
   	<body id="page-top">
-    	
+
     	<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top" id="sideNav">
     		<a class="navbar-brand js-scroll-trigger" href="#page-top">
     			<span class="d-block d-md-none">Karthik Gangadharaiah</span>
@@ -59,17 +59,17 @@
     	</nav>
 
     	<div class="container mb-4" style="margin-top: 3.75em;">
-    		<section id="about">
+    		<div id="about">
     			<div class="text-center">
     				<span class="h3"><u>Karthik Gangadharaiah</u></span>
     			</div>
     			<br>
     			<span class="lead">A software developer who has a passion for solving real world problems. I have 8+ years of experience in the software industry. I have worked in finance, retail and currently working in a healthcare domain. I have been primarily involved with web technologies building agile software systems for different needs and users.</span>
-    		</section>
+    		</div>
 
     		<hr>
 
-    		<section id="experience">
+    		<div id="experience">
     			<div class="text-center">
     				<span class="h3"><u>Experience</u></span>
     			</div>
@@ -94,7 +94,7 @@
     					<span class="badge badge-pill badge-info">MySQL <i class="fas fa-database"></i></span>
     					<span class="badge badge-pill badge-info">php <i class="fab fa-php"></i></span>
     					<span class="badge badge-pill badge-info">JavaScript <i class="fab fa-js-square"></i></span>
-    					<span class="badge badge-pill badge-info">Bootstrap <i class="fas fa-code"></i></i></span>
+    					<span class="badge badge-pill badge-info">Bootstrap <i class="fas fa-code"></i></span>
     					<span class="badge badge-pill badge-info">CSS <i class="fab fa-css3-alt"></i></span>
     					<span class="badge badge-pill badge-info">Apache Server <i class="fas fa-server"></i></span>
     				</div>
@@ -120,7 +120,7 @@
     					<span class="badge badge-pill badge-info">MySQL <i class="fas fa-database"></i></span>
     					<span class="badge badge-pill badge-info">Java <i class="fab fa-java"></i></span>
     					<span class="badge badge-pill badge-info">JavaScript <i class="fab fa-js-square"></i></span>
-    					<span class="badge badge-pill badge-info">HTML <i class="fas fa-code"></i></i></span>
+    					<span class="badge badge-pill badge-info">HTML <i class="fas fa-code"></i></span>
     				</div>
     			</div>
 
@@ -140,7 +140,7 @@
     			<div class="row">
     				<div class="col form-group">
     					<span class="badge badge-pill badge-info">Microsoft Office <i class="fas fa-database"></i></span>
-    					<span class="badge badge-pill badge-info">Java <i class="fab fa-java"></i></i></span>
+    					<span class="badge badge-pill badge-info">Java <i class="fab fa-java"></i></span>
     					<span class="badge badge-pill badge-info">Apache Server <i class="fas fa-server"></i></span>
     				</div>
     			</div>
@@ -166,11 +166,11 @@
     				</div>
     			</div>
 
-    		</section>
+    		</div>
 
     		<hr>
 
-    		<section id="education">
+    		<div id="education">
     			<div class="text-center">
     				<span class="h3"><u>Education</u></span>
     			</div>
@@ -187,27 +187,25 @@
     					</tr>
     				</thead>
     				<tbody>
-    					<tr>
-    						<tr>
-    							<td>The University of Texas at Arlington, Arlington, Texas</td>
-    							<td>Graduate in Computer Science</td>
-    							<td>August 2013 - May 2015</td>
-    							<td>3.4 GPA</td>
-    						</tr>
-    						<tr>
-    							<td>Dayananda Sagar College of Engineering, Bangalore, India</td>
-    							<td>Undergraduate in Information Science</td>
-    							<td>September 2006 - June 2010</td>
-    							<td>71.25/100</td>
-    						</tr>
-    					</tr>
+						<tr>
+							<td>The University of Texas at Arlington, Arlington, Texas</td>
+							<td>Graduate in Computer Science</td>
+							<td>August 2013 - May 2015</td>
+							<td>3.4 GPA</td>
+						</tr>
+						<tr>
+							<td>Dayananda Sagar College of Engineering, Bangalore, India</td>
+							<td>Undergraduate in Information Science</td>
+							<td>September 2006 - June 2010</td>
+							<td>71.25/100</td>
+						</tr>
     				</tbody>
     			</table>
-    		</section>
+    		</div>
 
     		<hr>
 
-    		<section id="skills">
+    		<div id="skills">
     			<div class="text-center">
     				<span class="h3"><u>Skills</u></span>
     			</div>
@@ -358,11 +356,11 @@
     				</div>
     			</div>
 
-    		</section>
+    		</div>
 
     		<hr>
 
-    		<section id="interests">
+    		<div id="interests">
     			<div class="text-center">
     				<span class="h3"><u>Interests</u></span>
     			</div>
@@ -371,14 +369,14 @@
 
     			<div class="row">
     				<div class="col form-group">
-    					I am always interested in learning any new technology which solves a real world problem. Currently, trying to learn and master web technologies which keeps us all connected in this digital world. Next, interested to learn and apply my machine learning skills, deep learning skills to the areas where I will be working. 
+    					I am always interested in learning any new technology which solves a real world problem. Currently, trying to learn and master web technologies which keeps us all connected in this digital world. Next, interested to learn and apply my machine learning skills, deep learning skills to the areas where I will be working.
     				</div>
     			</div>
-    		</section>
+    		</div>
 
     		<hr>
 
-    		<section id="awards">
+    		<div id="awards">
     			<div class="text-center">
     				<span class="h3"><u>Awards</u></span>
     			</div>
@@ -390,7 +388,7 @@
 				  	<li class="list-group-item"><i class="fas fa-award text-warning"></i> Placed fourth in Data science competition held DFW Hackathon</li>
 				  	<li class="list-group-item"><i class="fas fa-award text-warning"></i> Vice president of computer security club at UT Arlington</li>
 				</ul>
-    		</section>
+    		</div>
     	</div>
 
     	<a id="back-to-top" href="#" class="btn btn-info back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><i class="fas fa-arrow-circle-up"></i></a>
@@ -426,9 +424,9 @@
 
 			    //Smooth scroll to div
 	    		$('.nav-link').click(function() {
-				    var sectionTo = $(this).attr('href');
+				    var divTo = $(this).attr('href');
 				    $('html, body').animate({
-				      scrollTop: $(sectionTo).offset().top
+				      scrollTop: $(divTo).offset().top
 				    }, 1000);
 				});
 			});
